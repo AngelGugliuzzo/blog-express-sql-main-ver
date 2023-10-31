@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: mariadb:latest
+    container_name: blog-db
+    environment:
+      MARIADB_ROOT_PASSWORD: 123456
+      MARIADB_DATABASE: blog
+      TZ: America/Argentina/Buenos_Aires
+    ports:
+      - '3306:3306'
